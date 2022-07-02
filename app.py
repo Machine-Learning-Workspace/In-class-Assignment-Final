@@ -19,12 +19,12 @@ def predict(x):
     val = model(x).detach().numpy()
     return float(val)
 
+
 @app.route('/')
-def root():
+def hello_world():
     val = predict(0.21)
     print(val)
-    return 'In-class-Assignment-Final-Model'
-
+    return f'helllo'
 
 if __name__ == '__main__':
     app.run()
